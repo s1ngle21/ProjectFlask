@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Browse data</title>
+</head>
+<body>
+    <h1>Browse data</h1>
+    {% if data|length > 0 %}
+        <ul>
+        {% for entry in data%}
+            <li><b>{{ entry[2] }}</b> ({{ entry[1] }})
+            <p>
+            {{ entry[3] }}
+            <hr>
+        {% endfor %}
+        </ul>
+    {% else %}
+        This blog is empty.
+    {% endif %}
+
+    <img width="360" height="220" src = "https://drive.google.com/uc?export=view&id=1q7UlfA3lWyPKu390M7bMcLjvkwThqdM8" alt="bicycle">
+</body>
+</html>
